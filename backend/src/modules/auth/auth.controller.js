@@ -33,8 +33,8 @@ exports.login = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false, // true in production with HTTPS
-      sameSite: "lax"
+      secure: true,
+      sameSite: "none"
     });
 
     res.json({ id: user.id, username: user.username });
