@@ -16,6 +16,7 @@ const pool = new Pool({
 });
 
 pool.on("connect", () => {
+  console.log(process.env.DATABASE_URL)
   console.log("PostgreSQL Connected");
 });
 
